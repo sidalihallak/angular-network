@@ -1,0 +1,39 @@
+<!doctype html>
+<html class="no-js" lang="en" ng-app="ngVisApp">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AngularVis</title>
+  <link rel="stylesheet" href="bower_components/foundation/css/foundation.css"/>
+  <link rel="stylesheet" href="bower_components/foundation-icons/foundation-icons.css"/>
+  <link rel="stylesheet" href="bower_components/vis/dist/vis.min.css"/>
+  <style>
+   
+    
+    #mynetwork {
+      width: 400px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+  </style>
+</head>
+<body ng-controller="appController">
+
+
+<vis ng-transclude>
+    <network id="mynetwork" data="data" options="options"></network>
+</vis>
+
+
+<script src="bower_components/moment/min/moment.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/foundation/js/foundation.min.js"></script>
+<script src="bower_components/vis/dist/vis.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="angular-vis.js"></script>
+<script src="app-network.js"></script>
+<script>
+  $(document).foundation();
+</script>
+</body>
+</html>
